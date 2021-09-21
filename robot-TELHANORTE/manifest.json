@@ -1,0 +1,37 @@
+{
+    "manifest_version":2,
+    "name": "telhanorte scraper",
+    "version": "0.03",
+    "content_scripts":[
+        {
+            "matches":[
+                "<all_urls>"
+            ],
+            "js":["content.js"],
+            
+            "run_at": "document_end"
+        }
+    ],
+    "background":{
+        "scripts": ["background.js"]
+
+    },
+    
+    "web_accessible_resources": ["/assets/css/*", 
+                                 "/assets/*"],
+    "permissions":["tabs", 
+                   "webNavigation",
+                   "http://*/*", 
+                   "https://*/*",
+                   "webRequest",
+                   "webRequestBlocking"],
+
+    "browser_action":{
+        "default_icon":"assets/img/bot_ico.png",
+        "default_popup":"popup.html",
+        "default_title": "Bot Telahnorte"
+
+    },
+    "content_security_policy": "script-src 'self' https://apis.google.com/js/api.js 'unsafe-eval'; object-src 'self'"
+
+}
