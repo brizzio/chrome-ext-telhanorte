@@ -1,5 +1,7 @@
 # chrome-ext-telhanorte
 
+https://usefulangle.com/post/339/chrome-extension-create-page-scraper
+
 
 let arr = [2, 3, 4];
 
